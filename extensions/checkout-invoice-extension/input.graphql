@@ -1,0 +1,18 @@
+query Input {
+  cart {
+    cost {
+      totalAmount {
+        amount
+      }
+    }
+    buyerIdentity {
+       customer {
+       hasAnyTag(tags:["Veterinarian","Breeder"])
+       }
+    }
+  }
+  paymentMethods {
+    id
+    name
+  }
+}
