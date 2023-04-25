@@ -21,8 +21,8 @@ export default /**
  */
     (input) => {
   // Get the customer tag from the function input, and return early if they are prosumer
-  const cartTotal = input.cart.buyerIdentity.customer.hasAnyTag ?? false;
-  if (cartTotal) {
+  const isProsumer = input.cart.buyerIdentity.customer.hasAnyTag ?? false;
+  if (isProsumer) {
     // You can use STDERR for debug logs in your function
     console.error("Prosumer customer");
     return NO_CHANGES;
